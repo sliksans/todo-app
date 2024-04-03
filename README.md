@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+## Todo list app
+
+This is a todo list app created using Firebase and React with Typescript.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

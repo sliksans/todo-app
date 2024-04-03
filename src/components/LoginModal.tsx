@@ -41,7 +41,6 @@ const LoginModal: FunctionComponent<LoginModalProps> = ({
   }, [authError, mounted]);
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    console.log("Logging in with:", { email, password });
     e.preventDefault();
 
     if (submitFunction === "login") {

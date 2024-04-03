@@ -39,9 +39,8 @@ const TodoList: FunctionComponent<TodoListProps> = ({
         )}
         {filteredTodos.map((todo, i) => (
           <TodoCard
-            key={i}
+            key={todo.id || i}
             todo={todo}
-            filteredId={i.toString()}
             completeTodo={completeTodo}
             deleteTodo={deleteTodo}
           />

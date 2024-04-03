@@ -11,7 +11,6 @@ export type Todo = {
 
 class TodoRepository {
   static async addTodo(userId: string, todo: Todo): Promise<void | FirebaseError> {
-    console.log("adding todo", todo);
     try {
       todo.created = Date.now();
       const todoCollectionRef = collection(db, `users/${userId}/todos`);

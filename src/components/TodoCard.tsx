@@ -4,18 +4,15 @@ import { MdDeleteOutline } from "react-icons/md";
 
 type TodoCardProps = {
   todo: Todo;
-  filteredId: string;
   completeTodo: (todoId: string) => void;
   deleteTodo: (todoId: string) => void;
 };
 
 const TodoCard: FunctionComponent<TodoCardProps> = ({
   todo,
-  filteredId,
   completeTodo,
   deleteTodo,
 }) => {
-  console.log("todo completed:", todo.completed);
   return (
     <div className="my-4 flex min-w-[424px] items-center justify-between rounded-md bg-violet-400 px-4 py-2 text-white shadow-md transition-all duration-200 ease-out hover:shadow-lg">
       <input
@@ -23,7 +20,7 @@ const TodoCard: FunctionComponent<TodoCardProps> = ({
         type="checkbox"
         checked={todo.completed}
         onChange={() =>
-          completeTodo(todo.id ? (todo.id as string) : filteredId)
+          completeTodo(todo.id as string)
         }
       />
       <div className={`grow overflow-hidden text-ellipsis px-4 ${todo.completed && "line-through"}`}>
@@ -31,7 +28,7 @@ const TodoCard: FunctionComponent<TodoCardProps> = ({
       </div>
       <button
         className="transition-all duration-200 ease-out hover:text-red-600"
-        onClick={() => deleteTodo(todo.id ? (todo.id as string) : filteredId)}
+        onClick={() => deleteTodo(todo.id as string)}
       >
         <MdDeleteOutline fontSize={24} />
       </button>

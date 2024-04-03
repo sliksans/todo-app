@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-violet-200 text-violet-800;
+  }
+
+  .filter-button--active {
+    @apply rounded-md border-2 border-violet-500 bg-violet-500 px-8 py-1 font-semibold uppercase text-white shadow-lg shadow-violet-500/50 transition-all duration-200 ease-out
+  }
+
+  .filter-button {
+    @apply rounded-md border-2 border-violet-500 px-8 py-1 font-semibold uppercase text-violet-500 transition-all duration-200 ease-out
+  }
+
+  .button--light {
+    @apply rounded-md bg-white px-4 py-1 text-sm font-semibold uppercase text-violet-500
+  }
+
+  .button {
+    @apply rounded-md bg-violet-500 px-4 py-1 text-sm font-semibold uppercase text-white
+  }
+
+  .login-input {
+    @apply rounded-md border-2 border-violet-500 px-2 py-1 text-violet-900 placeholder-violet-300 outline-none transition-all duration-200 ease-out focus:shadow-md focus:shadow-violet-500/35
+  }
+  
+  .modal-close {
+    @apply rounded-md border-2 border-red-500 bg-white px-4 py-1 text-xs font-semibold uppercase text-red-500 transition-all duration-200 ease-out hover:bg-red-500 hover:text-white
+  }
+}
